@@ -33,9 +33,19 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.cardview)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
