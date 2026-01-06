@@ -27,6 +27,8 @@ class UpdateAddActivity : AppCompatActivity(), CrudView {
                 presenter.addData(
                     binding.etName.text.toString(),
                     binding.etPhone.text.toString(),
+                    binding.etJob.text.toString(),
+                    binding.etHobby.text.toString(),
                     binding.etAlamat.text.toString())
             }
         }else if (itemDataItem != null){
@@ -34,12 +36,16 @@ class UpdateAddActivity : AppCompatActivity(), CrudView {
             val item = itemDataItem as DataItem?
             binding.etName.setText(item?.staffName.toString())
             binding.etPhone.setText(item?.staffHp.toString())
+            binding.etJob.setText(item?.staffJob.toString())
+            binding.etHobby.setText(item?.staffHobby.toString())
             binding.etAlamat.setText(item?.staffAlamat.toString())
             binding.btnAction.setOnClickListener() {
                 presenter.updateData(
                     item?.staffId ?: "",
                     binding.etName.text.toString(),
                     binding.etPhone.text.toString(),
+                    binding.etJob.text.toString(),
+                    binding.etHobby.text.toString(),
                     binding.etAlamat.text.toString())
                 finish()
             }

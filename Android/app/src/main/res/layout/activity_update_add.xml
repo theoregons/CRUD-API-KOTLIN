@@ -21,6 +21,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
+        android:id="@+id/etJob"
+        android:hint="Job"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/etHobby"
+        android:hint="Hobby"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
         android:id="@+id/etAlamat"
         android:hint="Alamat"
         android:lines="3"

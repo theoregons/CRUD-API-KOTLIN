@@ -36,6 +36,8 @@ interface StaffService{
     @POST("add-staff")
     fun addStaff(@Field("name") name : String,
                  @Field("hp") hp : String,
+                 @Field("pekerjaan") pekerjaan : String,
+                 @Field("hobi") hobi : String,
                  @Field("alamat") alamat : String) : Call<ResultStatus>
     //Fungsi Get Data
     @GET("get-staff")
@@ -51,5 +53,7 @@ interface StaffService{
     fun updateStaff(@Field("id") id: String,
                     @Field("name") name: String,
                     @Field("hp") hp : String,
+                    @Field("pekerjaan") pekerjaan : String,
+                    @Field("hobi") hobi : String,
                     @Field("alamat") alamat : String) : Call<ResultStatus>
 }
