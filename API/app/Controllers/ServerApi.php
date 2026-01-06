@@ -19,10 +19,14 @@ class ServerApi extends Controller
         $name = $this->request->getPost('name');
         $hp = $this->request->getPost('hp');
         $alamat = $this->request->getPost('alamat');
+        $pekerjaan = $this->request->getPost('pekerjaan');
+        $hobi = $this->request->getPost('hobi');
         $data = [
             'staff_name' => $name,
             'staff_hp' => $hp,
-            'staff_alamat' => $alamat
+            'staff_alamat' => $alamat,
+            'staff_job' => $pekerjaan,
+            'staff_hobby' => $hobi
         ];
         $q = $this->db->table('tb_staff')->insert($data);
         if ($q) {
