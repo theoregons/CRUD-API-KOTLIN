@@ -32,6 +32,9 @@ class DataAdapter(val data: List<DataItem>? , private val click: onClickItem) :
         binding.btnHapus.setOnClickListener {
             click.delete(data?.get(position))
         }
+        binding.btnEdit.setOnClickListener {
+            click.delete(data?.get(position))
+        }
     }
     interface onClickItem{
         fun clicked (item: DataItem?)
